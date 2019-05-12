@@ -1,0 +1,1 @@
+export { default as AsyncComponentFactory } from './AsyncComponent/AsyncComponentFactory';

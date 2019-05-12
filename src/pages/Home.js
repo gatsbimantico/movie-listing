@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-import './Home.css';
-import { Title } from '../framework/components/Title/Title';
+import { Title } from '../framework/components';
 import {
   AppBody,
   AppFooter,
@@ -19,7 +18,7 @@ class App extends PureComponent {
           Home body
         </AppBody>
         <AppFooter>
-          Home Footer
+          The movie list is an open source demo project made with love by gatsbimantico.
         </AppFooter>
       </AppLayout>
     );

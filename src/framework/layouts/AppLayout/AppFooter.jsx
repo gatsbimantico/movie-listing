@@ -3,8 +3,10 @@ import { electricPurple } from '../../../site/colors';
 
 export default styled.footer`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  padding: 20px;
   background: ${electricPurple};
   color: white;
 `;

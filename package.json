@@ -5,6 +5,8 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router": "^5.0.0",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1"
   },
   "scripts": {
@@ -16,6 +18,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "workspaces": ["workspace/zone-framework"],
   "browserslist": {
     "production": [
       ">0.2%",

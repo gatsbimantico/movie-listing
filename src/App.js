@@ -1,14 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {
+  AppBody,
+  AppFooter,
+  AppHeader,
+  AppLayout
+} from 'zone-framework/layouts';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <AppLayout>
+      <AppHeader>
+        Header
+      </AppHeader>
+      <AppBody>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          I have edited <code>src/App.js</code> and saved to reload.
         </p>
         <a
           className="App-link"
@@ -18,8 +27,11 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
+      </AppBody>
+      <AppFooter>
+        Footer
+      </AppFooter>
+    </AppLayout>
   );
 }
 

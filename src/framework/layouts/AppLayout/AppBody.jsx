@@ -1,5 +1,5 @@
 import styled from 'styled-components'
 
 export default styled.main`
-  background: white;
+  padding: 40px 20px;
 `;

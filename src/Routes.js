@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { AsyncComponentFactory } from 'zone-framework/components';
+import { AsyncComponentFactory } from './framework/components';
 
-const AsyncHome = new AsyncComponentFactory(() => import("./App"));
+const AsyncHome = new AsyncComponentFactory(() => import("./pages/Home"));
 
 export default ({ childProps }) => (
   <Router>

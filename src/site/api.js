@@ -7,7 +7,7 @@ export function getNowPlaying() {
 }
 
 export function getImage(img) {
-  return `https://image.tmdb.org/t/p/original/${img}`;
+  return `https://image.tmdb.org/t/p/w200${img}`;
 }
 
 export function getGenres() {

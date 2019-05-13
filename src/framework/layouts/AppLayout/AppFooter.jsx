@@ -9,4 +9,6 @@ export default styled.footer`
   padding: 20px;
   background: ${electricPurple};
   color: white;
+  z-index: 1;
+  position: relative;
 `;

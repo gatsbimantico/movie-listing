@@ -4,12 +4,13 @@ import { Provider } from 'react-redux'
 
 import './index.css';
 
+import initialStore from './business-logic/initial-store';
 import App from './site/routes';
 import configureStore from './site/store';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Provider store={configureStore()}><App /></Provider>,
+  <Provider store={configureStore(initialStore)}><App /></Provider>,
   document.getElementById('root')
 );
 

@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Title } from '../framework/components';
+import { Title, FilmList } from '../framework/components';
 import {
   AppBody,
   AppFooter,
@@ -15,7 +15,7 @@ class App extends PureComponent {
           <Title.h1>The Movie list</Title.h1>
         </AppHeader>
         <AppBody>
-          Home body
+          <FilmList />
         </AppBody>
         <AppFooter>
           The movie list is an open source demo project made with love by gatsbimantico.

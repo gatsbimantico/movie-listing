@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
-import simpleReducer from './simpleReducer';
+import apiIsLoaded from './apiIsLoaded';
+import appIsLoaded from './appIsLoaded';
 
 export default combineReducers({
-  simpleReducer
+  apiIsLoaded,
+  appIsLoaded,
 });

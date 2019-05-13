@@ -22,15 +22,26 @@ const FilmImage = ({ className, src }) => (
 
 const FilmImageStyled = styled(FilmImage)`
   width: 160px;
-  height: 256px;
+  min-height: 160px;
   box-shadow: 0 0.3em 0.7em -0.3em black;
-  margin: 0 auto 20px;
+  margin: 0 10px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   background: lightgrey no-repeat center center;
   background-size: cover;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
+  ${props =>
+    !props.hover
+      ? "height: 100%;"
+      : `
+    max-width: 30vw;
+    width: 200px;
+    height: 300px;
+  `}
 `;
 
 class FilmImageWrapper extends Component {
@@ -77,7 +88,7 @@ class FilmImageWrapper extends Component {
   };
 
   render() {
-    const { src } = this.props;
+    const { hover, src } = this.props;
     const { isInViewPort } = this.state;
 
     if (isInViewPort) {
@@ -86,8 +97,9 @@ class FilmImageWrapper extends Component {
     }
 
     return (
-      <div ref={this.saveRef}>
+      <div ref={this.saveRef} style={{ height: '100%' }}>
         <FilmImageStyled
+          hover={hover}
           src={isInViewPort ? getImage(src) : undefined}
         />
       </div>

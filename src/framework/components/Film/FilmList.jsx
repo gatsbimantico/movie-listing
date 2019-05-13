@@ -54,6 +54,6 @@ const FilmList = ({
 );
 
 export default connect(mapStateToProps)(styled(FilmList)`
-  columns: 5 200px;
-  z-index: -1;
+  display: flex;
+  flex-wrap: wrap;
 `);

@@ -57,8 +57,9 @@ class FilmImageWrapper extends Component {
 
     const main = document.querySelector("main");
 
-    if (main)
+    if (main) {
       main.addEventListener("scroll", this.updateVisibility);
+    }
 
     setTimeout(this.updateVisibility(), 100);
   }
@@ -68,8 +69,9 @@ class FilmImageWrapper extends Component {
 
     const main = document.querySelector("main");
 
-    if (main)
+    if (main) {
       main.removeEventListener("scroll", this.updateVisibility);
+    }
   }
 
   updateVisibility = event => {
@@ -93,7 +95,7 @@ class FilmImageWrapper extends Component {
 
     if (isInViewPort) {
       this.rendered = true;
-      document.querySelector('main').removeEventListener("scroll", this.updateVisibility);
+      this.componentWillUnmount();
     }
 
     return (

@@ -3,7 +3,7 @@ import given from '../framework/logic/gherkin';
 export const GENRE_FILTER_CLICKED = 'GENRE_FILTER_CLICKED';
 export const initGenreFilterClicked = {};
 
-const storeGenreSelectionChange = (state, action) => console.log(action) || ({
+const storeGenreSelectionChange = (state, action) => ({
   ...state,
   ...{
     [action.id]: action.value,

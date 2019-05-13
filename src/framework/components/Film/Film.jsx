@@ -33,21 +33,6 @@ const FilmGenreList = styled.div`
   flex-wrap: wrap;
 `;
 
-const FilmGenre = styled.button`
-  border: 0;
-  // background: #fef33e;
-  background: transparent;
-  padding: 0 3px;
-  display: inline-block;
-  margin: 1px 1px;
-  flex: 1 1 5%;
-  white-space: pre;
-
-  &:hover {
-    background: #fdd803;
-  }
-`;
-
 const Film = ({ className, genre_ids, genreList = [], title, poster_path }) => (
   <div className={className}>
     <FilmImage src={poster_path} />
@@ -90,4 +75,5 @@ export default styled(Film)`
   justify-content: flex-start;
   align-items: center;
   text-align: center;
+  break-inside: avoid;
 `;

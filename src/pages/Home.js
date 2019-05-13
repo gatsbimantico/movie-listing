@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import {
   FilmList,
+  FilterContainer,
   GenreFilter,
   Title,
   VoteFilter
@@ -20,8 +21,11 @@ class App extends PureComponent {
           <Title.h1>The Movie list</Title.h1>
         </AppHeader>
         <AppBody>
-          <GenreFilter />
-          <VoteFilter />
+          <FilterContainer>
+            <Title.h2>Too many films?</Title.h2>
+            <GenreFilter />
+            <VoteFilter />
+          </FilterContainer>
           <FilmList />
         </AppBody>
         <AppFooter>

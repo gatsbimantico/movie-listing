@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
+import Title from '../Title/Title';
+
 import GenreFilterItem from './GenreFilterItem';
 
 const mapStateToProps = ({ apiIsLoaded: { genres } }) => ({
@@ -10,7 +12,7 @@ const mapStateToProps = ({ apiIsLoaded: { genres } }) => ({
 
 const GenreFilter = ({ className, genres, onClick }) => (
   <div>
-    <span>Filter by genre: </span>
+    <Title.h3>Filter by genre: </Title.h3>
     <div className={className}>
       {genres.map(genre => (
         <GenreFilterItem withCheckbox key={genre.id} genre={genre} />

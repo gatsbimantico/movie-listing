@@ -1,7 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 import styled from "styled-components";
+
 import { VOTE_FILTER_CLICKED } from "../../../business-logic/actions";
+import {electricPurple} from '../../../site/colors';
+
+import Title from "../Title/Title";
 
 const mapStateToProps = ({ voteFilterClicked: { selectedVote } }) => ({
   selectedVote
@@ -23,7 +27,8 @@ const votingItemStyle = `
   }
 
   &:hover {
-    background: lightgrey;
+    background: ${electricPurple};
+    color: white;
   }
 `;
 
@@ -40,6 +45,14 @@ const VoteItem = styled.div`
     content: "☆";
   }
 
+  &:hover {
+    color: #fdd803;
+
+    & label:before {
+      content: "★";
+    }
+  }
+
   input:checked ~ label:before {
     content: "★";
   }
@@ -51,7 +64,7 @@ const VoteClear = styled.div`
 
 const VoteFilter = ({ className, onClick, selectedVote }) => (
   <div>
-    <span>Filter by vote: </span>{" "}
+    <Title.h3>Filter by vote: </Title.h3>{" "}
     <div className={className}>
       <VoteClear>
         <input
@@ -85,7 +98,7 @@ export default connect(
   mapDispatchToProps
 )(styled(VoteFilter)`
   display: inline-flex;
-  margin: 20px 0 20px 10px;
+  margin: 10px;
   justify-content: center;
   align-items: center;
   max-width: 220px;

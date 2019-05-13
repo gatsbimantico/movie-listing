@@ -11,11 +11,9 @@ export default {
     color: ${electricPurple};
     text-transform: uppercase;
     margin: 10px 0 0;
-    white-space: pre;
   `,
   h3: styled.h3`
     color: ${jadeGreen};
     margin: 20px 0 0;
-    white-space: pre;
   `
 };

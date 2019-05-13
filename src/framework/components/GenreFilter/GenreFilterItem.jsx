@@ -78,7 +78,7 @@ const GenreFilterItem = ({ className, genre, onClick, withCheckbox }) => (
         onChange={event => onClick(genre.id, event.target.checked)}
       />
     )}
-    <label className={!withCheckbox && 'text-small'} htmlFor={`GenreFilterItem-${genre.id}`}>
+    <label className={!withCheckbox ? 'text-small' : ''} htmlFor={`GenreFilterItem-${genre.id}`}>
       {genre.name}
     </label>
   </GenreItem>

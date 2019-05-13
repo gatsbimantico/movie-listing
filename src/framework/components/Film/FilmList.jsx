@@ -20,6 +20,7 @@ const filterByVote = selectedVote => results =>
     ? results.filter(film => film.vote_average / 2 >= selectedVote)
     : results;
 
+const sortByPopularity = results => results.sort((a, b) => b.popularity - a.popularity);
 
 const mapStateToProps = ({
   apiIsLoaded: { genres, nowPlaying },
@@ -44,6 +45,7 @@ const FilmList = ({
     {[
       filterByVote(selectedVote),
       filterByGenre(selectedGenres),
+      sortByPopularity,
     ].reduce((acc, fn) => fn(acc), results)
       .map(film => (
         <AsyncFilm key={film.id} {...film} genreList={genres} />

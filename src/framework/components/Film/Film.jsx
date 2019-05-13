@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { getImage } from '../../../site/api';
+import GenreFilterItem from '../GenreFilter/GenreFilterItem';
 
 const FilmImage = styled.div`
   width: 160px;
@@ -47,14 +48,14 @@ const FilmGenre = styled.button`
   }
 `;
 
-const Film = ({ className, genre_ids, genreList, title, poster_path }) => (
+const Film = ({ className, genre_ids, genreList = [], title, poster_path }) => (
   <div className={className}>
     <FilmImage src={poster_path} />
     <FilmTitle>{title}</FilmTitle>
     <FilmGenreList>
       {genreList
         .filter(genre => genre_ids.indexOf(genre.id) !== -1)
-        .map(genre => <FilmGenre key={genre.id}><small>{genre.name}</small></FilmGenre>)}
+        .map(genre => <GenreFilterItem key={genre.id} genre={genre} />)}
     </FilmGenreList>
   </div>
 );

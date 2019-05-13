@@ -1,23 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { getImage } from '../../../site/api';
+
 import GenreFilterItem from '../GenreFilter/GenreFilterItem';
 
-const FilmImage = styled.div`
-  width: 160px;
-  height: 256px;
-  box-shadow: 0 0.3em 0.7em -0.3em black;
-  margin: 0 auto 20px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  background: ${props =>
-      props.src ? `url(${getImage(props.src)})` : "lightgrey"}
-    no-repeat center center;
-  background-size: cover;
-`;
+import FilmImage from './FilmImage';
 
 const FilmTitle = styled.div`
   font-weight: bold;

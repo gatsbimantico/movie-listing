@@ -41,3 +41,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 - Stepped down from using yarn workspaces, as a bug is still persisting preventing babel to be run over the symlinked dependencies. The folder src/framework` could be its own repo at some point.
 - Appart from that, code splitting is working by using dynamic imports.
+
+### Bug fixing
+
+- Font size behaves different than in emulator, fixing the size for mobile.
+- When filtering images are lost in mobile by not being re-rendered.
